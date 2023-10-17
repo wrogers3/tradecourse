@@ -1,5 +1,7 @@
+#%%
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 
 # we are grabbing data from csv and eliminating the fat
 # such as weekends and maybe non adjusted closes...
@@ -28,10 +30,24 @@ def test_run():
         df1 = df1.join(df_temp)
 
     print(df1)
+    return df1
+    #plot with  df1.plot() non normal tho
 
     # there are other row and column slices 
     
+def plot_data(df):
+    ax = df.plot(title = "Stock prices", fontsize = 10)
+    ax.set_xlabel("Date")
+    ax.set_ylabel("Price")
+    plot_normalData(df)
+
+#important for normalizing
+def plot_normalData(df):
+    plt.show()
+    return df / df.iloc[0,:]
+
 test_run()
+plot_data(test_run())
 
 
 
@@ -40,3 +56,5 @@ test_run()
     
 
 
+
+# %%

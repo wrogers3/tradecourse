@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://finance.yahoo.com/quote/GLD/history/
+HostUrl=https://query1.finance.yahoo.com/v7/finance/download/GLD?period1=1665909552&period2=1697445552&interval=1d&events=history&includeAdjustedClose=true
